@@ -13,7 +13,7 @@ To make a new component, copy this template (below), put the assets into a direc
 [image/illustration of component in use]
 ##### Downloads ##### 
 
-[GC file]
+[GH file]
 [RH file if GH file is not autonomous]
 [user component]
 [plugin]
