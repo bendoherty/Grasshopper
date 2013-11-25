@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>GHcomponents - Simple HTML export</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  </head>
+  <body>
+    <div class="wiki" id="content_view" style="display: block;">
+This setup allows for GH data to be written into an HTML file.<br />
+It isn't the most elegant solution, but it does minimise external dependencies.<br />
+<a href="files/veryBasicHTMLtemplate.gh">veryBasicHTMLtemplate.gh</a><br />
+<br />
+You make your page in the blue boxes, and the yellow boxes are more or less fixed.<br />
+It comes with JQuery and Bootstrap from a CDN, so there's no installing needed to get nice responsive layouts.<br />
+<br />
+<img src="/mainSpace/files/HtmlTemplate.PNG" alt="HtmlTemplate.PNG" title="HtmlTemplate.PNG" style="width: 800px;" /><br />
+The imgName in the component maps to the variable of the same name in the HTML template by using python's <span style="font-family: 'Courier New',Courier,monospace;"><strong>locals()</span> feature. This means that you just need to add the name to the component and it becomes available in the HTML.<br />
+<br />
+<img src="/mainSpace/files/htmlVariables.PNG" alt="htmlVariables.PNG" title="htmlVariables.PNG" /><img src="/mainSpace/files/htmlTemplateMustaches.PNG" alt="htmlTemplateMustaches.PNG" title="htmlTemplateMustaches.PNG" /><br />
+<br />
+There is also a very rough image grab tool that puts the image in the page. This needs much more updating to support cameras etc.<br />
+<img src="http://ghcomponents.wikispaces.com/file/view/htmlImgCap.PNG/467106706/800x356/htmlImgCap.PNG" alt="htmlImgCap.PNG" title="htmlImgCap.PNG" style="height: 356px; width: 800px;" /><br />
+Calling this code:<br />
+<span style="font-family: 'Courier New',Courier,monospace;">import rhinoscriptsyntax as rs</span><br />
+<span style="font-family: 'Courier New',Courier,monospace;">rs.SendKeystrokes('-viewcapturetofile')</span><br />
+<span style="font-family: 'Courier New',Courier,monospace;">rs.SendKeystrokes('C:\\Users\\bdoherty\\Desktop\\testghwebsite\\'+str(x)+'.jpg')</span><br />
+<span style="font-family: 'Courier New',Courier,monospace;">rs.SendKeystrokes('')</span><br />
+<br />
+</strong>TODO: This needs to get it's own wiki page soon**
+    </div>
+  </body>
+</html>
